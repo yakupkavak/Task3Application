@@ -1,6 +1,7 @@
 package com.example.task3application.extensions
 
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.LiveData
 import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 
@@ -9,4 +10,9 @@ fun Fragment.navigate(action: NavDirections){
 }
 fun Fragment.popBackStack(){
     findNavController().popBackStack()
+}
+fun <T> Fragment.observe(liveData: LiveData<T>, onChange: (T) -> Unit) {
+    liveData.observe(viewLifecycleOwner) { data ->
+        data?.let(onChange)
+    }
 }

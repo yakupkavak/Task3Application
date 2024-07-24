@@ -6,10 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.Observer
-import com.example.task3application.R
 import com.example.task3application.databinding.FragmentCounterBinding
+import com.example.task3application.extensions.observe
 
 class CounterFragment : Fragment() {
 
@@ -17,11 +15,11 @@ class CounterFragment : Fragment() {
     private val binding get() = _binding!!
     private var countNumber = 0
     private var checkSwitch = false
-    private val model: CounterViewModel by viewModels()
+    private val viewModel: CounterViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentCounterBinding.inflate(inflater, container, false)
         val view = binding.root
@@ -33,7 +31,6 @@ class CounterFragment : Fragment() {
 
         setListeners()
         setObserver()
-
     }
 
     private fun setListeners() {
@@ -42,20 +39,14 @@ class CounterFragment : Fragment() {
                 increaseCounter()
             }
             sViewModel.setOnCheckedChangeListener { _, switch ->
-                if (switch) {
-                    checkSwitch = true
-                    println("switch true")
-                } else {
-                    checkSwitch = false
-                    println("switch false")
-                }
+                checkSwitch = switch
             }
         }
     }
 
     private fun increaseCounter() {
         if (checkSwitch) {
-            model.incrementCount()
+            viewModel.incrementCount()
         } else {
             countNumber++
             binding.tvCount.text = countNumber.toString()
@@ -63,9 +54,8 @@ class CounterFragment : Fragment() {
     }
 
     private fun setObserver() {
-        val counterListener: LiveData<Int> = model.counterNum
-        counterListener.observe(viewLifecycleOwner) { newCount ->
-            binding.tvCount.text = newCount.toString()
+        observe(viewModel.counterNum){
+            binding.tvCount.text = it.toString()
         }
     }
 

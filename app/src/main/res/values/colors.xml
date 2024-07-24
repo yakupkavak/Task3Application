@@ -10,6 +10,7 @@
 
     <color name="system_background">#D3D3D3</color>
     <color name="textColor">#1F1F1F</color>
+    <color name="corner_color">#595959</color>
     <color name="design_color">#898989</color>
     <color name="row_color">#EFEFEF</color>
 </resources>

@@ -52,6 +52,14 @@
         <item name="fontFamily">@font/roboto</item>
     </style>
 
+    <style name="ButtonSupportStyle">
+        <item name="android:background">@drawable/support_button_design</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="fontFamily">@font/roboto</item>
+    </style>
+
     <style name="RowStyle">
         <item name="android:background">@drawable/feed_row_design</item>
     </style>
