@@ -10,6 +10,7 @@ import com.example.task3application.extensions.navigate
 
 class MainFragment : Fragment() {
 
+
     private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
 

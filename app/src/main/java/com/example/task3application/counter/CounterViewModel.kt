@@ -19,4 +19,5 @@ class CounterViewModel : ViewModel() {
             _counter.value = it + 1
         }
     }
+
 }

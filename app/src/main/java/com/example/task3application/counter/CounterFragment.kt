@@ -45,6 +45,7 @@ class CounterFragment : Fragment() {
     }
 
     private fun increaseCounter() {
+
         if (checkSwitch) {
             viewModel.incrementCount()
         } else {
