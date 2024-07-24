@@ -6,8 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.navGraphViewModels
 import com.example.task3application.R
+import com.example.task3application.SharedViewModel
 import com.example.task3application.databinding.FragmentGuessBinding
+import com.example.task3application.extensions.navigate
 import com.example.task3application.extensions.observe
 
 class GuessFragment : Fragment() {
@@ -15,7 +18,9 @@ class GuessFragment : Fragment() {
     private var _binding: FragmentGuessBinding? = null
     private val binding get() = _binding!!
     private val viewModel: GuessViewModel by viewModels()
-    private var number = 0
+    private val sharedViewModel: SharedViewModel by navGraphViewModels(R.id.main_nav)
+    private var randomNumber = 0
+    private var randomChar = 'A'
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,6 +43,7 @@ class GuessFragment : Fragment() {
             with(binding) {
                 tvChar.visibility = View.VISIBLE
                 tvChar.text = it.toString()
+                randomChar = it
             }
         }
     }
@@ -49,51 +55,54 @@ class GuessFragment : Fragment() {
                 tvInfo.text = getString(R.string.failure)
             }
             bGuess.setOnClickListener {
-                if (viewModel.checkGame(number)) {
+                if (viewModel.checkGame(randomNumber)) {
                     tvInfo.text = getString(R.string.success)
-                    tvChar.text = viewModel.randomNum.value.toString()
+                    tvChar.text = randomNumber.toString()
+                    sharedViewModel.updateChar(randomChar)
+                    val action = GuessFragmentDirections.actionGuessFragmentToDetailFragment()
+                    navigate(action)
                 } else {
                     tvInfo.text = getString(R.string.failure)
                 }
             }
             bZero.setOnClickListener {
-                number = 0
+                randomNumber = 0
                 tvInfo.text = getString(R.string.zero)
             }
             bOne.setOnClickListener {
-                number = 1
+                randomNumber = 1
                 tvInfo.text = getString(R.string.one)
             }
             bTwo.setOnClickListener {
-                number = 2
+                randomNumber = 2
                 tvInfo.text = getString(R.string.two)
             }
             bThree.setOnClickListener {
-                number = 3
+                randomNumber = 3
                 tvInfo.text = getString(R.string.three)
             }
             bFour.setOnClickListener {
-                number = 4
+                randomNumber = 4
                 tvInfo.text = getString(R.string.four)
             }
             bFive.setOnClickListener {
-                number = 5
+                randomNumber = 5
                 tvInfo.text = getString(R.string.five)
             }
             bSix.setOnClickListener {
-                number = 6
+                randomNumber = 6
                 tvInfo.text = getString(R.string.six)
             }
             bSeven.setOnClickListener {
-                number = 7
+                randomNumber = 7
                 tvInfo.text = getString(R.string.seven)
             }
             bEight.setOnClickListener {
-                number = 8
+                randomNumber = 8
                 tvInfo.text = getString(R.string.eight)
             }
             bNine.setOnClickListener {
-                number = 9
+                randomNumber = 9
                 tvInfo.text = getString(R.string.nine)
             }
         }

@@ -14,7 +14,7 @@ class GuessViewModel : ViewModel() {
         }
     }
 
-    val randomNum: LiveData<Int> get() = _randomNum
+    private val randomNum: LiveData<Int> get() = _randomNum
 
     private val _char: MutableLiveData<Char> by lazy {
         MutableLiveData<Char>().apply {

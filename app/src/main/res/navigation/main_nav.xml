@@ -28,6 +28,16 @@
         android:id="@+id/guessFragment"
         android:name="com.example.task3application.guess.GuessFragment"
         android:label="fragment_guess"
-        tools:layout="@layout/fragment_guess" />
+        tools:layout="@layout/fragment_guess" >
+        <action
+            android:id="@+id/action_guessFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.task3application.guess.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
 
 </navigation>
