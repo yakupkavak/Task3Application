@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id(libs.plugins.parcelize.withoutVersion.get().pluginId)
+    id(libs.plugins.safeargs.withoutVersion.get().pluginId)
 }
 
 android {
@@ -15,6 +17,9 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildFeatures {
+        viewBinding = true
     }
 
     buildTypes {
@@ -36,6 +41,9 @@ android {
 }
 
 dependencies {
+
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

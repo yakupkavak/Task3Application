@@ -1,3 +1,34 @@
 <resources>
-    <string name="app_name">Task3Application</string>
+    <string name="app_name">InternTasks-2A</string>
+    <string name="country">İstanbul</string>
+    <string name="day">Bugün</string>
+    <string name="weather_today_degree">26</string>
+    <string name="weather_today_degree_icon">°</string>
+    <string name="weather_today">Güneşli</string>
+    <string name="wind_text">Rüzgar</string>
+    <string name="wind_today">3 km/s</string>
+    <string name="tomorrow">Sal, 02 Nisan</string>
+    <string name="tomorrow_weather">14° - 27°</string>
+    <string name="two_day_after">Çar, 03 Nisan</string>
+    <string name="two_day_after_weather">14° - 27°</string>
+    <string name="three_day_after">Per, 04 Nisan</string>
+    <string name="three_day_after_weather">14° - 27°</string>
+    <string name="four_day_after">Cum, 05 Nisan</string>
+    <string name="four_day_after_weather">14° - 27°</string>
+    <string name="wing_icon">rüzgar simgesi</string>
+    <string name="sun_icon">güneş simgesi</string>
+    <string name="rainy_icon">yağmur simgesi</string>
+    <string name="cloud_icon">bulut simgesi</string>
+    <string name="update_data">Verileri Güncelle</string>
+    <string name="date_info">01 Nisan 2023</string>
+
+    <string name="zero">0</string>
+    <string name="use_viewmodel">ViewModel Kullan</string>
+    <string name="increase_counter">Sayacı Arttır</string>
+    <string name="counter_menu">Counter</string>
+    <string name="guess_menu">Guess</string>
+    <string name="refresh_describtion">refresh</string>
+
+
+
 </resources>
