@@ -45,7 +45,6 @@ class CounterFragment : Fragment() {
     }
 
     private fun increaseCounter() {
-
         if (checkSwitch) {
             viewModel.incrementCount()
         } else {
@@ -55,7 +54,7 @@ class CounterFragment : Fragment() {
     }
 
     private fun setObserver() {
-        observe(viewModel.counterNum){
+        observe(viewModel.counterNum) {
             binding.tvCount.text = it.toString()
         }
     }

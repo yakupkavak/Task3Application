@@ -17,14 +17,17 @@
             android:id="@+id/action_mainFragment_to_counterFragment"
             app:destination="@id/counterFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/counterFragment"
         android:name="com.example.task3application.counter.CounterFragment"
         android:label="fragment_counter"
         tools:layout="@layout/fragment_counter" />
+
     <fragment
         android:id="@+id/guessFragment"
         android:name="com.example.task3application.guess.GuessFragment"
         android:label="fragment_guess"
         tools:layout="@layout/fragment_guess" />
+
 </navigation>

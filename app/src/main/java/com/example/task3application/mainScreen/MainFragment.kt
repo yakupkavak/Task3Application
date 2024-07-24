@@ -35,6 +35,10 @@ class MainFragment : Fragment() {
                 val action = MainFragmentDirections.actionMainFragmentToCounterFragment()
                 navigate(action)
             }
+            btnGuessFragment.setOnClickListener {
+                val action = MainFragmentDirections.actionMainFragmentToGuessFragment()
+                navigate(action)
+            }
         }
     }
 
