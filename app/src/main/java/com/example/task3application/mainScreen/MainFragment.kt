@@ -10,13 +10,12 @@ import com.example.task3application.extensions.navigate
 
 class MainFragment : Fragment() {
 
-
     private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentMainBinding.inflate(inflater, container, false)
         val view = binding.root
@@ -46,5 +45,4 @@ class MainFragment : Fragment() {
         super.onDestroy()
         _binding = null
     }
-
 }

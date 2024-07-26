@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Theme.General" parent="Theme.MaterialComponents.DayNight.NoActionBar">
 
@@ -41,6 +41,12 @@
     <style name="LargeSizeMedium">
         <item name="android:textSize">@dimen/text_size_large</item>
         <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="DetailScreenStyle">
+        <item name="android:textSize">@dimen/text_size_xlarge</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/detail_color</item>
     </style>
 
     <style name="ButtonStyle">

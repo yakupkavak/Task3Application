@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
-import androidx.navigation.navGraphViewModels
 import com.example.task3application.R
 import com.example.task3application.SharedViewModel
 import com.example.task3application.databinding.FragmentGuessBinding
@@ -18,7 +18,7 @@ class GuessFragment : Fragment() {
     private var _binding: FragmentGuessBinding? = null
     private val binding get() = _binding!!
     private val viewModel: GuessViewModel by viewModels()
-    private val sharedViewModel: SharedViewModel by navGraphViewModels(R.id.main_nav)
+    private val sharedViewModel: SharedViewModel by activityViewModels()
     private var randomNumber = 0
     private var randomChar = 'A'
 
@@ -33,7 +33,6 @@ class GuessFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         setListeners()
         setObserve()
     }
@@ -50,58 +49,57 @@ class GuessFragment : Fragment() {
 
     private fun setListeners() {
         with(binding) {
-            bReset.setOnClickListener {
+            btnReset.setOnClickListener {
                 viewModel.resetGame()
                 tvInfo.text = getString(R.string.failure)
             }
-            bGuess.setOnClickListener {
+            btnGuess.setOnClickListener {
                 if (viewModel.checkGame(randomNumber)) {
                     tvInfo.text = getString(R.string.success)
                     tvChar.text = randomNumber.toString()
                     sharedViewModel.updateChar(randomChar)
-                    val action = GuessFragmentDirections.actionGuessFragmentToDetailFragment()
-                    navigate(action)
+                    navigate(GuessFragmentDirections.actionGuessFragmentToDetailFragment())
                 } else {
                     tvInfo.text = getString(R.string.failure)
                 }
             }
-            bZero.setOnClickListener {
+            btnZero.setOnClickListener {
                 randomNumber = 0
                 tvInfo.text = getString(R.string.zero)
             }
-            bOne.setOnClickListener {
+            btnOne.setOnClickListener {
                 randomNumber = 1
                 tvInfo.text = getString(R.string.one)
             }
-            bTwo.setOnClickListener {
+            btnTwo.setOnClickListener {
                 randomNumber = 2
                 tvInfo.text = getString(R.string.two)
             }
-            bThree.setOnClickListener {
+            btnThree.setOnClickListener {
                 randomNumber = 3
                 tvInfo.text = getString(R.string.three)
             }
-            bFour.setOnClickListener {
+            btnFour.setOnClickListener {
                 randomNumber = 4
                 tvInfo.text = getString(R.string.four)
             }
-            bFive.setOnClickListener {
+            btnFive.setOnClickListener {
                 randomNumber = 5
                 tvInfo.text = getString(R.string.five)
             }
-            bSix.setOnClickListener {
+            btnSix.setOnClickListener {
                 randomNumber = 6
                 tvInfo.text = getString(R.string.six)
             }
-            bSeven.setOnClickListener {
+            btnSeven.setOnClickListener {
                 randomNumber = 7
                 tvInfo.text = getString(R.string.seven)
             }
-            bEight.setOnClickListener {
+            btnEight.setOnClickListener {
                 randomNumber = 8
                 tvInfo.text = getString(R.string.eight)
             }
-            bNine.setOnClickListener {
+            btnNine.setOnClickListener {
                 randomNumber = 9
                 tvInfo.text = getString(R.string.nine)
             }

@@ -35,10 +35,10 @@ class CounterFragment : Fragment() {
 
     private fun setListeners() {
         with(binding) {
-            bCounter.setOnClickListener {
+            btnCounter.setOnClickListener {
                 increaseCounter()
             }
-            sViewModel.setOnCheckedChangeListener { _, switch ->
+            switchViewModel.setOnCheckedChangeListener { _, switch ->
                 checkSwitch = switch
             }
         }

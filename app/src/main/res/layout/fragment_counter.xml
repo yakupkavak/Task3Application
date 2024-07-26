@@ -7,7 +7,7 @@
     tools:context=".counter.CounterFragment">
 
     <Button
-        android:id="@+id/bCounter"
+        android:id="@+id/btnCounter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/increase_counter"
@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/sViewModel"
+        android:id="@+id/switchViewModel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/use_viewmodel"

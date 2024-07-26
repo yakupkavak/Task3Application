@@ -13,4 +13,5 @@
     <color name="corner_color">#595959</color>
     <color name="design_color">#898989</color>
     <color name="row_color">#EFEFEF</color>
+    <color name="detail_color">#0A2941</color>
 </resources>
