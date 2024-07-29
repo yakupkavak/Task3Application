@@ -4,13 +4,13 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.task3application.extensions.randomChar
-import com.example.task3application.extensions.randomInteger
+import com.example.task3application.extensions.randomIntegerZeroToTen
 
 class GuessViewModel : ViewModel() {
 
     private val _randomNum: MutableLiveData<Int> by lazy {
         MutableLiveData<Int>().apply {
-            value = randomInteger(0, 10)
+            value = randomIntegerZeroToTen()
         }
     }
 
@@ -24,7 +24,7 @@ class GuessViewModel : ViewModel() {
     val char: LiveData<Char> get() = _char
 
     fun resetGame() {
-        _randomNum.value = randomInteger(0, 10)
+        _randomNum.value = randomIntegerZeroToTen()
         _char.value = randomChar()
     }
 

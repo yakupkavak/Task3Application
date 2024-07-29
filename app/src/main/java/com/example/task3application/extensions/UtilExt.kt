@@ -1,10 +1,7 @@
 package com.example.task3application.extensions
 
-fun randomInteger(min: Int, max: Int): Int {
-    return (min until max).random()
+fun randomIntegerZeroToTen(): Int {
+    return (0 until 10).random()
 }
 
-fun randomChar() : Char{
-    val allowedChars = ('A'..'Z')
-    return allowedChars.random()
-}
+fun randomChar() : Char{ return ('A'..'Z').random() }
