@@ -38,7 +38,7 @@ class CounterFragment : Fragment() {
             btnCounter.setOnClickListener {
                 increaseCounter()
             }
-            switchViewModel.setOnCheckedChangeListener { _, switch ->
+            switchVMUsage.setOnCheckedChangeListener { _, switch ->
                 checkSwitch = switch
             }
         }

@@ -12,12 +12,11 @@ class CounterViewModel : ViewModel() {
         }
     }
 
-    val counterNum : LiveData<Int> get() = _counter
+    val counterNum: LiveData<Int> get() = _counter
 
-    fun incrementCount(){
+    fun incrementCount() {
         _counter.value?.let {
             _counter.value = it + 1
         }
     }
-
 }
