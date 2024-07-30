@@ -1,7 +1,8 @@
 package com.example.task3application.extensions
 
-fun randomIntegerZeroToTen(): Int {
-    return (0 until 10).random()
+fun randomInteger(min: Int = 0, max: Int = 10): Int {
+    return (min until max).random()
 }
 
-fun randomChar() : Char{ return ('A'..'Z').random() }
+fun randomChar() = ('A'..'Z').random()
+

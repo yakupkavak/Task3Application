@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 
-fun Fragment.navigate(action: NavDirections){
+fun Fragment.navigate(action: NavDirections) {
     findNavController().navigate(action)
 }
 

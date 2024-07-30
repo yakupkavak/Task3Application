@@ -13,6 +13,7 @@ import com.example.task3application.SharedViewModel
 import com.example.task3application.databinding.FragmentGuessBinding
 import com.example.task3application.extensions.navigate
 import com.example.task3application.extensions.observe
+import com.example.task3application.extensions.resIdByName
 
 class GuessFragment : Fragment() {
 
@@ -70,21 +71,15 @@ class GuessFragment : Fragment() {
                 btnZero, btnOne, btnTwo, btnThree,
                 btnFour, btnFive, btnSix, btnSeven, btnEight, btnNine
             )
-            val integerResources = listOf(
-                R.integer.zero, R.integer.one,
-                R.integer.two, R.integer.three, R.integer.four, R.integer.five,
-                R.integer.six, R.integer.seven, R.integer.eight, R.integer.nine
-            )
-            val stringResources = listOf(
-                R.string.zero, R.string.one, R.string.two, R.string.three,
-                R.string.four, R.string.five, R.string.six, R.string.seven,
-                R.string.eight, R.string.nine
-            )
 
             buttonList.forEachIndexed { index, button ->
                 button.setOnClickListener {
-                    randomNumber = resources.getInteger(integerResources[index])
-                    tvInfo.text = getString(stringResources[index])
+                    randomNumber = button.tag.toString().toInt()
+                    tvInfo.text = getString(
+                        requireContext().resIdByName(
+                            "number_${index}", "string"
+                        )
+                    )
                 }
             }
         }
