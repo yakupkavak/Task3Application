@@ -35,10 +35,10 @@ class CounterFragment : Fragment() {
 
     private fun setListeners() {
         with(binding) {
-            bCounter.setOnClickListener {
+            btnCounter.setOnClickListener {
                 increaseCounter()
             }
-            sViewModel.setOnCheckedChangeListener { _, switch ->
+            switchVMUsage.setOnCheckedChangeListener { _, switch ->
                 checkSwitch = switch
             }
         }
@@ -54,7 +54,7 @@ class CounterFragment : Fragment() {
     }
 
     private fun setObserver() {
-        observe(viewModel.counterNum){
+        observe(viewModel.counterNum) {
             binding.tvCount.text = it.toString()
         }
     }

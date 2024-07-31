@@ -1,44 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">InternTasks-2A</string>
-    <string name="country">Istanbul</string>
-    <string name="day">Today</string>
-    <string name="weather_today">Sunny</string>
-    <string name="weather_today_degree">26</string>
-    <string name="weather_today_degree_icon">°</string>
-    <string name="wind_text">Wind</string>
-    <string name="wind_today">3 km/h</string>
-    <string name="tomorrow">Tue, April 2</string>
-    <string name="tomorrow_weather">14° - 27°</string>
-    <string name="two_day_after">Wed, April 3</string>
-    <string name="two_day_after_weather">14° - 27°</string>
-    <string name="three_day_after">Thu, April 4</string>
-    <string name="three_day_after_weather">14° - 27°</string>
-    <string name="four_day_after">Fri, April 5</string>
-    <string name="four_day_after_weather">14° - 27°</string>
-    <string name="wing_icon">wing icon</string>
-    <string name="sun_icon">sun icon</string>
-    <string name="rainy_icon">rainy icon</string>
-    <string name="cloud_icon">cloud icon</string>
-    <string name="update_data">Update Data</string>
-    <string name="date_info">01 April 2023</string>
-    <string name="counter_menu">Counter</string>
 
-    <string name="zero">0</string>
+    <string name="app_name">InternTasks-2A</string>
+    <string name="day">Today</string>
+    <string name="counter_menu">Counter</string>
     <string name="use_viewmodel">Use ViewModel</string>
     <string name="increase_counter">Increase Counter</string>
     <string name="guess_menu">Guess</string>
     <string name="refresh_describtion">refresh</string>
-    <string name="one">1</string>
-    <string name="two">2</string>
-    <string name="three">3</string>
-    <string name="four">4</string>
-    <string name="five">5</string>
-    <string name="six">6</string>
-    <string name="seven">7</string>
-    <string name="eight">8</string>
-    <string name="nine">9</string>
+    <string name="number_0">0</string>
+    <string name="number_1">1</string>
+    <string name="number_2">2</string>
+    <string name="number_3">3</string>
+    <string name="number_4">4</string>
+    <string name="number_5">5</string>
+    <string name="number_6">6</string>
+    <string name="number_7">7</string>
+    <string name="number_8">8</string>
+    <string name="number_9">9</string>
     <string name="reset">Reset</string>
     <string name="guess">Guess</string>
+    <string name="success">Success</string>
+    <string name="failure">Try Again</string>
 
 </resources>

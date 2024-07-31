@@ -15,7 +15,7 @@ class MainFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentMainBinding.inflate(inflater, container, false)
         val view = binding.root
@@ -34,6 +34,10 @@ class MainFragment : Fragment() {
                 val action = MainFragmentDirections.actionMainFragmentToCounterFragment()
                 navigate(action)
             }
+            btnGuessFragment.setOnClickListener {
+                val action = MainFragmentDirections.actionMainFragmentToGuessFragment()
+                navigate(action)
+            }
         }
     }
 
@@ -41,5 +45,4 @@ class MainFragment : Fragment() {
         super.onDestroy()
         _binding = null
     }
-
 }
